@@ -9,7 +9,7 @@
         <p *ngIf="track.releaseDate" class="date">
           Release date: {{ track.releaseDate | date : "mediumDate" }}
         </p>
-        <button (click)="playAudio(track.audioUrl,track.title)">Play</button>
+        <button (click)="playAudio(track.audioUrl,track.title)"><span class="material-symbols-rounded">play_arrow</span></button>
       </div>
     </div>
   </div>
@@ -21,7 +21,7 @@
       <img [src]="track.coverUrl" class="cover" alt="{{ track.title }}" />
       <div class="info">
         <h3>{{ track.title }}</h3>
-        <button (click)="playAudio(track.audioUrl,track.title)">Play</button>
+        <button (click)="playAudio(track.audioUrl,track.title)"> <span class="material-symbols-rounded">play_arrow</span></button>
       </div>
     </div>
   </div>

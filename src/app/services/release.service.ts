@@ -13,29 +13,29 @@ export interface Track {
   providedIn: 'root'
 })
 export class ReleaseService {
-  constructor(private firestore: Firestore) {}
+  // constructor(private firestore: Firestore) {}
 
-  async getNextRelease(): Promise<Track[]> {
-    const colRef = collection(this.firestore, 'next_releases');
-    const snapshot = await getDocs(colRef);
+  // async getNextRelease(): Promise<Track[]> {
+  //   const colRef = collection(this.firestore, 'next_releases');
+  //   const snapshot = await getDocs(colRef);
 
-    const tracks: Track[] = [];
-    snapshot.forEach(docSnap => {
-      tracks.push({ id: docSnap.id, ...docSnap.data() } as Track);
-    });
+  //   const tracks: Track[] = [];
+  //   snapshot.forEach(docSnap => {
+  //     tracks.push({ id: docSnap.id, ...docSnap.data() } as Track);
+  //   });
 
-    return tracks;
-  }
+  //   return tracks;
+  // }
 
-  async getReleased(): Promise<Track[]> {
-    const colRef = collection(this.firestore, 'released');
-    const snapshot = await getDocs(colRef);
+  // async getReleased(): Promise<Track[]> {
+  //   const colRef = collection(this.firestore, 'released');
+  //   const snapshot = await getDocs(colRef);
 
-    const tracks: Track[] = [];
-    snapshot.forEach(docSnap => {
-      tracks.push({ id: docSnap.id, ...docSnap.data() } as Track);
-    });
+  //   const tracks: Track[] = [];
+  //   snapshot.forEach(docSnap => {
+  //     tracks.push({ id: docSnap.id, ...docSnap.data() } as Track);
+  //   });
 
-    return tracks;
-  }
+  //   return tracks;
+  // }
 }

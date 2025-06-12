@@ -57,37 +57,28 @@
       }
 
       button {
-        background: linear-gradient(45deg, #b22222, #8b0000);
+        background: #fff;
+        color: darkred;
         border: none;
-        color: #fff;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        padding: 0.6rem 1.5rem;
-        border-radius: 30px;
-        cursor: pointer;
-        box-shadow: 0 4px 8px rgba(178, 34, 34, 0.6);
-        transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
-        font-size: 1rem;
-        display: inline-flex;
+        border-radius: 50%;
+        width: 48px;
+        height: 48px;
+        display: flex;
         align-items: center;
         justify-content: center;
-        gap: 0.5rem;
+        box-shadow: 0 4px 12px rgba(255, 0, 0, 0.2);
+        transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+        cursor: pointer;
 
-        &::before {
-          content: "▶";
-          display: inline-block;
-          margin-right: 0.4rem;
-          font-size: 1.1rem;
-          line-height: 1;
+        .material-symbols-rounded {
+          font-size: 28px;
         }
 
-        &:hover,
-        &:focus {
-          background: linear-gradient(45deg, #ff4c4c, #a80000);
-          box-shadow: 0 6px 12px rgba(255, 76, 76, 0.8);
-          transform: translateY(-2px);
-          outline: none;
+        &:hover {
+          background: darkred;
+          color: white;
+          transform: scale(1.05);
+          box-shadow: 0 6px 14px rgba(255, 0, 0, 0.4);
         }
       }
     }

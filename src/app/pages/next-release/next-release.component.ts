@@ -21,6 +21,13 @@ export class NextReleaseComponent implements AfterViewInit{
       audioUrl: 'assets/images/release/released/Spine/Spine.wav',
       releaseDate: undefined,
     },
+     {
+      id: 'spine',
+      title: 'NTFM',
+      coverUrl: 'assets/images/release/released/NTFM/NTFM.jpg',
+      audioUrl: 'assets/images/release/released/NTFM/NTFM.wav',
+      releaseDate: undefined,
+    }
   ];
 
   nextReleases: Track[] = [
@@ -31,7 +38,7 @@ export class NextReleaseComponent implements AfterViewInit{
         'assets/images/release/next_releases/Diamanti Fini/Diamanti Fini.png',
       audioUrl:
         'assets/images/release/next_releases/Diamanti Fini/DIAMANTI FINI(MASTER).mp3',
-      releaseDate: undefined,
+      releaseDate: new Date('2025-07-19'),
     },
   ];
 

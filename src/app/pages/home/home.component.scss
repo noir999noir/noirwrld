@@ -53,3 +53,19 @@
     }
   }
 }
+.social-links {
+  z-index: 2;
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.5rem;
+
+  a {
+    font-size: 2rem;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: var(--accent);
+    }
+  }
+}
