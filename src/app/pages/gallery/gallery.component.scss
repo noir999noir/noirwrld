@@ -1,0 +1,36 @@
+.gallery-page {
+  padding: 2rem;
+  text-align: center;
+  min-height: 700px;
+
+  .title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #8b0000;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+    color: #888;
+    margin-bottom: 2rem;
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+
+    img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(255, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.03);
+        box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
+      }
+    }
+  }
+}

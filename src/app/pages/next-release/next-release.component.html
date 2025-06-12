@@ -1,0 +1,46 @@
+<div class="next-release-page">
+  <h2 class="section-title">Discover the next releases</h2>
+
+  <div class="release-grid">
+    <div *ngFor="let track of nextReleases" class="release-card">
+      <img [src]="track.coverUrl" class="cover" alt="{{ track.title }}" />
+      <div class="info">
+        <h3>{{ track.title }}</h3>
+        <p *ngIf="track.releaseDate" class="date">
+          Release date: {{ track.releaseDate | date : "mediumDate" }}
+        </p>
+        <button (click)="playAudio(track.audioUrl,track.title)">Play</button>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="section-title">Released</h2>
+
+  <div class="release-grid">
+    <div *ngFor="let track of released" class="release-card">
+      <img [src]="track.coverUrl" class="cover" alt="{{ track.title }}" />
+      <div class="info">
+        <h3>{{ track.title }}</h3>
+        <button (click)="playAudio(track.audioUrl,track.title)">Play</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Player audio globale -->
+  <div class="main-audio" >
+    <audio #audioPlayer class="audio-player"></audio>
+
+    <div class="custom-player">
+      <!-- Titolo della traccia attualmente in riproduzione -->
+      <div class="track-title" *ngIf="currentTitle">
+        {{ currentTitle }}
+      </div>
+
+      <div class="progress-container" (click)="seek($event)">
+        <div class="progress-bar" [style.width.%]="progress"></div>
+      </div>
+
+      <div class="time">{{ currentTime }} / {{ duration }}</div>
+    </div>
+  </div>
+</div>

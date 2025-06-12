@@ -1,0 +1,8 @@
+<div class="gallery-page">
+  <h1 class="title">Gallery</h1>
+  <p class="subtitle">Visual memories from NoirWrld</p>
+
+  <div class="gallery-grid">
+    <img *ngFor="let img of images" [src]="img" alt="Gallery item" />
+  </div>
+</div>

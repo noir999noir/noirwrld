@@ -1,1 +1,53 @@
-/* You can add global styles to this file, and also import other style files */
+/* RESET GLOBALE */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+/* EVITA OVERFLOW NON DESIDERATO */
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: 'Special Gothic Expanded One', sans-serif;
+}
+
+
+button {
+  font-family: 'Special Gothic Expanded One', sans-serif;
+}
+/* TEMA SCURO DI BASE */
+:root {
+  --bg-color: #0a0a0a;
+  --text-color: #f0f0f0;
+  --accent: #8b0000;
+}
+
+body {
+  font-family:'Space Grotesk', sans-serif;;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* LINK BASE */
+a {
+  color: var(--text-color);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--accent);
+  }
+}
+
+/* DISATTIVA SCROLLBAR SU MOBILE */
+body {
+  overscroll-behavior: none;
+  touch-action: pan-y;
+}

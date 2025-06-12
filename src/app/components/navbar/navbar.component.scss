@@ -1,0 +1,40 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #000;
+  border-bottom: 1px solid #2a2a2a;
+
+  .logo-link {
+    display: flex;
+    align-items: center;
+
+    .logo {
+      height: 50px;
+      width: auto;
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+
+    a {
+      color: var(--text-color);
+      font-weight: 500;
+
+      &:hover {
+        color: var(--accent);
+      }
+    }
+  }
+}
+
+
+.nav-links a.active {
+  font-weight: bold;
+  color: #8b0000;
+  border-bottom: 2px solid #8b0000;
+}
